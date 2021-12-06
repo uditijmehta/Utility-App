@@ -1,8 +1,13 @@
 const express = require("express");
 const dotEnv = require("dotenv");
+const morgan = require("morgan");
+const colors = require("colors");
 const cookieParser = require("cookie-parser");
+const mongoSanitize = require("express-mongo-sanitize");
+const helmet = require("helmet");
 const xss = require("xss-clean");
 const connectDB = require("./config/db");
+const errorHandler = require("./middleware/error");
 const cors = require("cors");
 
 // Load ENV vars
@@ -37,6 +42,18 @@ app.use(mongoSanitize());
 
 // Cors Support
 app.use(cors());
+
+// Mount Router
+app.use("/api/v1/expenses", require("./routes/expense"));
+app.use("/api/v1/todos", require("./routes/todos"));
+app.use("/api/v1/auth", require("./routes/auth"));
+
+app.use(errorHandler);
+
+// heroku
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 const server = app.listen(
   PORT,
