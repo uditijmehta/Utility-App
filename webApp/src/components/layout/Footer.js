@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <MainFooter>
       <p>
-        Copyright &copy;2021 Cubicle. Designed by <span>SwissEncoders</span>
+        Copyright &copy;2021 Helper. Designed by <span>Team 8</span>
       </p>
 
       <Icons>
