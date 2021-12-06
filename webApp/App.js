@@ -6,7 +6,6 @@ import { useDispatch } from "react-redux";
 
 import Nav from "./components/navbar/Nav";
 
-
 const App = () => {
 
   return (
