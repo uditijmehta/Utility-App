@@ -6,6 +6,8 @@ import { useDispatch } from "react-redux";
 
 import Nav from "./components/navbar/Nav";
 import Footer from "./components/layout/Footer";
+// Alert
+import Alert from "./components/layout/Alert";
 
 // Actions
 import setAuthToken from "./utils/setAuthToken";
