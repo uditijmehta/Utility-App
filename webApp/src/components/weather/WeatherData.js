@@ -76,4 +76,55 @@ const WeatherData = () => {
   );
 };
 
+const StyledWeatherData = styled(motion.div)`
+  h2 {
+    color: #ffffff;
+  }
+  h3 {
+    color: #f7f7f7;
+  }
+  height: 100%;
+  width: 40vw;
+  background-color: rgba(255, 255, 255, 0.09);
+  font-size: 1.1rem;
+
+  .form {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: 90%;
+      height: 50px;
+      color: #fff;;
+    }
+
+    label {
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 75rem) {
+    width: 100%;
+    font-size: 1rem;
+  }
+`;
+
+const WeatherDetails = styled(motion.div)`
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const CurrentWeatherDetails = styled(motion.div)`
+  font-size: 1.3rem;
+  height: 60%;
+
+  .weather-holders {
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.89);
+    }
+  }
+`;
+
 export default WeatherData;
