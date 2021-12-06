@@ -5,14 +5,40 @@ import { Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import Nav from "./components/navbar/Nav";
+import Footer from "./components/layout/Footer";
+
+// Actions
+import setAuthToken from "./utils/setAuthToken";
+import { loadUser } from "./actions/authActions";
+
+//Footer
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadUser());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="App">
-      <Nav></Nav>
+      <GlobalStyle />
+      <Nav />
+      <Alert />
+      <Switch>
+        <Route path="/" component={Welcome} exact />
+        <Route path="/register" component={RegisterPage} exact />
+        <Route path="/login" component={LoginPage} exact />
+
+        <PrivateRoute path="/home" component={Home} exact />
+      </Switch>
+
+      <Footer />
     </div>
   );
-};
-
+}
 export default App;
