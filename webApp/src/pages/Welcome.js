@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// Style
 import styled from "styled-components";
 
 const Welcome = () => {
-
   return (
     <WelcomeStyle className="landing-page">
       <div className="wrapper">
@@ -23,6 +21,17 @@ const Welcome = () => {
               </Link>
             </div>
           </div>
+
+          <img
+            className="curve"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/626071/bottom-curve_copy.svg"
+            alt="svg"
+          />
+          <img
+            className="waves"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/626071/waves_copy.svg"
+            alt="svg"
+          />
         </div>
       </div>
       <div className="background"></div>
@@ -130,6 +139,61 @@ const WelcomeStyle = styled.div`
     text-align: center;
     margin: 0;
     padding: 0;
+  }
+  .wrapper .header .content .button {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    padding-left: 20px;
+    background: #000;
+    color: #fff;
+    font-size: 1.3em;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    margin: 40px 5px 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 12px 20px -10px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 12px 20px -10px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 12px 20px -10px rgba(0, 0, 0, 0.65);
+    transition: box-shadow 0.5s;
+  }
+  .wrapper .header .content .button:hover {
+    -webkit-box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.65);
+    transition: box-shadow 0.5s;
+  }
+  /* .wrapper .header .content .button {
+    background-size: 20px auto;
+
+    background-position: 20px center;
+  } */
+
+  .wrapper .header .waves {
+    width: calc(100% + 10px);
+    height: auto;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    z-index: 0;
+  }
+  .wrapper .header .curve {
+    display: none;
+    width: calc(100% + 10px);
+    height: auto;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    z-index: 1;
   }
 `;
 
