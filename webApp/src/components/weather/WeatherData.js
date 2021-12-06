@@ -36,6 +36,42 @@ const WeatherData = () => {
           name="searchWeather"
         />
       </form>
+
+      <WeatherDetails>
+        <h2>Weather Details</h2>
+        {loading ? (
+          <div className="loading">
+            <Spinner />
+          </div>
+        ) : (
+          <CurrentWeatherDetails>
+            <div className="weather-holders">
+              <h3>
+                <span>Cloudy</span>
+                <span className="w-data">{`${weatherInfo.clouds.all}%`}</span>
+              </h3>
+            </div>
+            <div className="weather-holders">
+              <h3>
+                <span>Humidity</span>
+                <span className="w-data">{`${weatherInfo.main.humidity}%`}</span>
+              </h3>
+            </div>
+            <div className="weather-holders">
+              <h3>
+                <span>Wind</span>
+                <span className="w-data">{`${weatherInfo.wind.speed}km/h`}</span>
+              </h3>
+            </div>
+            <div className="weather-holders">
+              <h3>
+                <span>Pressure</span>
+                <span className="w-data">{`${weatherInfo.main.pressure}mb`}</span>
+              </h3>
+            </div>
+          </CurrentWeatherDetails>
+        )}
+      </WeatherDetails>
     </StyledWeatherData>
   );
 };
