@@ -66,6 +66,31 @@ const Nav = () => {
   );
   const [sidebar, setSidebar] = useState(false);
 
-}
+  // Functions
+  const showSidebar = () => {
+    setSidebar(!sidebar);
+  };
+  return (
+    <>
+      <IconContext.Provider value={{ color: "#fff" }}>
+        <Navbar>
+          <Link to="#" className="menu-bars main">
+            <BiIcons.BiMenuAltLeft onClick={showSidebar} />
+          </Link>
+        </Navbar>
+        <NavMenu className={sidebar ? "nav-menu active" : "nav-menu"}>
+          <ul onClick={showSidebar} className="nav-menu-items">
+            <li className="navbar-toggle">
+              <Link to="#" className="menu-bars">
+                <AiIcons.AiOutlineClose />
+              </Link>
+            </li>
+            {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
+          </ul>
+        </NavMenu>
+      </IconContext.Provider>
+    </>
+  );
+};
 
 export default Nav;
