@@ -1,0 +1,31 @@
+Navbar {
+    background-color: #121212;
+    color: #fff;
+    max-height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-bars.main {
+        margin-left: 2rem;
+        font-size: 2rem;
+        background: none;
+    } 
+  
+    .logo {
+        margin-right: 45%;
+        height: 7rem;
+
+        .st0 {
+            fill: #ffff;
+        }
+    }
+}
+
+NavMenu {
+    .menu-bars {
+        margin-left: 20px;
+      }
+
+    z-index: 100
+}
