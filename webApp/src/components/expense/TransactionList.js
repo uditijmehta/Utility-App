@@ -12,6 +12,22 @@ import Spinner from "../layout/Spinner";
 import styled from "styled-components";
 
 //  icons
+
+export const TransactionList = ({
+    updateHandler,
+    toggleSubmit,
+    setToggleSubmit,
+    updateExpenseHandler,
+  }) => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const [expensePerPage, setExpensePerPage] = useState(5);
+  
+    const { transactions, loading } = useSelector((state) => state.expenses);
+    const dispatch = useDispatch();
+    useEffect(() => {
+      dispatch(getTransactions());
+    }, [dispatch, updateExpenseHandler]);
+  };
   
  
 const TransactionListStyle = styled.div`
