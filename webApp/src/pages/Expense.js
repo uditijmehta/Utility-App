@@ -47,7 +47,29 @@ const Expense = () => {
         },
         [amount, dispatch, isEditItem, text]
       );
-    
-};
 
+      return (
+        <ExpenseStyle>
+          <div className="container">
+            <div className="content">
+              <Header />
+              <Balance />
+              <IncomeExpense />
+              <AddTransaction
+                text={text}
+                setText={setText}
+                amount={amount}
+                setAmount={setAmount}
+                toggleSubmit={toggleSubmit}
+                setToggleSubmit={setToggleSubmit}
+                isEditItem={isEditItem}
+                updateHandler={updateHandler}
+                updateExpenseHandler={updateExpenseHandler}
+              />
+            </div>
+          </div>
+        </ExpenseStyle>
+      );
+    };
+    
 export default Expense;
