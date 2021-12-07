@@ -7,6 +7,31 @@ import { addTransaction } from "../../actions/expenseAction";
 // Style
 import styled from "styled-components";
 
+export const AddTransaction = ({
+    text,
+    setText,
+    amount,
+    setAmount,
+    toggleSubmit,
+    updateExpenseHandler,
+  }) => {
+    const dispatch = useDispatch();
+  
+    const submitHandler = (e) => {
+      e.preventDefault();
+  
+      const newTransaction = {
+        id: uuidv4(),
+        text,
+        amount: +amount,
+      };
+  
+      dispatch(addTransaction(newTransaction));
+  
+      setText("");
+      setAmount(0);
+    };
+};
 
 const AddTransactionStyle = styled.div`
   color: #fff;
