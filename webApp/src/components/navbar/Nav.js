@@ -185,6 +185,7 @@ const Navbar = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Montserrat',sans-serif;
 
   .menu-bars.main {
     margin-left: 2rem;
