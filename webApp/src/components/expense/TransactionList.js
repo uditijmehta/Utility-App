@@ -35,8 +35,8 @@ export const TransactionList = ({
       indexOfFirstExpense,
       indexOfLastExpense
     );
-  };
   
+    
   // Next Expense
   const nextExpenseHandler = () => {
     if (transactions.length > 0) {
@@ -57,6 +57,39 @@ export const TransactionList = ({
       setCurrentPage(currentPage - 1);
     }
   };
+
+  return (
+    <TransactionListStyle>
+      <h3>History</h3>
+
+      <ul>
+        {currentExpense.map((transaction) => (
+          <Transaction
+            key={transaction._id}
+            transaction={transaction}
+            updateHandler={updateHandler}
+            toggleSubmit={toggleSubmit}
+            setToggleSubmit={setToggleSubmit}
+          />
+        ))}
+      </ul>
+      {loading && <Spinner />}
+      {currentExpense.length > 0 ? (
+        <>
+          <button className="btn-2" onClick={prevExpenseHandler}>
+            Prev
+          </button>
+          <button className="btn-2" onClick={nextExpenseHandler}>
+            Next
+          </button>
+        </>
+      ) : (
+        <h3>You don't have any Expenses added!</h3>
+      )}
+    </TransactionListStyle>
+  );
+};
+
  
 const TransactionListStyle = styled.div`
   h3 {
