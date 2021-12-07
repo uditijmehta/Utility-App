@@ -36,3 +36,21 @@ export const addTransaction = (transaction) => async (dispatch) => {
       });
     }
   };
+
+  // Delete Expense
+export const deleteTransaction = (id) => async (dispatch) => {
+    try {
+      await axios.delete(`/api/v1/expenses/${id}`);
+  
+      dispatch({
+        type: "DELETE_TRANSACTION",
+        payload: id,
+      });
+    } catch (err) {
+      dispatch({
+        type: "TRANSACTION_ERROR",
+        payload: err.response.data.error,
+      });
+    }
+  };
+  
