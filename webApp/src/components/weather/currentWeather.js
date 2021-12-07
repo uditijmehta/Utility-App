@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Weather from './weather-component';
-import Form from './weatherAppData';
+import Current from "./weatherAppCurrent";
 
 const API_KEY = "0c0b4df092dbae4f8a5b91894c65ca1d";
 
-export class WeatherData extends React.Component {
+export class CurrentWeather extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -64,16 +64,16 @@ export class WeatherData extends React.Component {
 
   getWeather = async (e) => {
     e.preventDefault()
+    console.log("Inside current get weather");
 
-    const city = e.target.elements.city.value;
+    // const city = e.target.elements.city.value;
 
-    console.log(city);
-    if (city) {
+    // console.log(city);
       const api_call = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+        `http://api.openweathermap.org/data/2.5/weather?q=Boston&appid=${API_KEY}`
       )
-      const response = await api_call.json()
-      console.log(response)
+      const response = await api_call.json();
+      console.log(response);
 
       this.setState({
         city: `${response.name}`,
@@ -85,15 +85,12 @@ export class WeatherData extends React.Component {
       })
 
       this.getweatherfavicon(this.weatherfavicon, response.weather[0].id)
-    } else {
-      this.setState({ error: true })
-    }
   }
 
   render() {
     return (
       <div className='App'>
-        <Form loadweatherdetails={this.getWeather} error={this.state.error} />
+        <Current loadweatherdetails={this.getWeather} error={this.state.error} />
         <Weather
           city={this.state.city}
           cel={this.state.cel}

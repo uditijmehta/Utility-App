@@ -1,7 +1,6 @@
 import React from "react";
 // Components
 import Greeting from "./Greeting";
-import WeatherData from "./WeatherData";
 import weatherBg from "../../img/weatherBg.jpg";
 
 // Styles
@@ -12,7 +11,6 @@ const Weather = () => {
   return (
     <StyledWeather>
       <Greeting />
-      <WeatherData />
     </StyledWeather>
   );
 };
