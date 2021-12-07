@@ -6,4 +6,13 @@ import alertReducer from './alertReducer';
 import authReducer from './authReducer';
 import { combineReducers } from 'redux';
 
-export default defaultReducer;
+const rootReducer = combineReducers({
+    weather: weatherReducer,
+    news: newsReducer,
+    todoList: todoReducer,
+    expenses: expenseReducer,
+    alert: alertReducer,
+    auth: authReducer,
+  });
+
+export default rootReducer;
