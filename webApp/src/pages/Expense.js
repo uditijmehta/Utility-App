@@ -31,6 +31,23 @@ const Expense = () => {
       setAmount(newEditItem.amount);
       setIsEditItem(newEditItem._id);
     };
+
+    const updateExpenseHandler = useCallback(
+        (e) => {
+          e.preventDefault();
+          const editedTransaction = {
+            text,
+            amount,
+          };
+          dispatch(updateTransaction(isEditItem, editedTransaction));
+    
+          setText("");
+          setAmount(0);
+          setToggleSubmit(false);
+        },
+        [amount, dispatch, isEditItem, text]
+      );
+    
 };
 
 export default Expense;
