@@ -10,6 +10,23 @@ import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 
+export const Transaction = ({
+    transaction,
+    updateHandler,
+    setToggleSubmit,
+  }) => {
+    const dispatch = useDispatch();
+    const deleteHandler = () => {
+      dispatch(deleteTransaction(transaction._id));
+    };
+
+    const sign = transaction.amount < 0 ? "-" : "+";
+
+    return (
+    <div></div>
+    );
+  };
+
 const TransactionStyle = styled.div`
   display: flex;
   width: 100%;
