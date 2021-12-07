@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import Nav from "./components/navbar/Nav";
+import Welcome from "./pages/Welcome";
 import Footer from "./components/layout/Footer";
 // Alert
 import Alert from "./components/layout/Alert";
