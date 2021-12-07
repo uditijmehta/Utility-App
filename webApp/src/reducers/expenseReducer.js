@@ -26,6 +26,14 @@ const initState = {
                     t._id === action.payload.id ? action.payload : t
                   ),
                 };
+
+         case "DELETE_TRANSACTION":
+                return {
+                     ...state,
+                      transactions: state.transactions.filter(
+                        (transaction) => transaction._id !== action.payload
+                      ),
+                    };          
    
       case "TRANSACTION_ERROR":
         return {
