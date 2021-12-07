@@ -15,3 +15,24 @@ export const getTransactions = () => async (dispatch) => {
     });
   }
 };
+
+// Add Expense
+export const addTransaction = (transaction) => async (dispatch) => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    try {
+      const res = await axios.post("/api/v1/expenses", transaction, config);
+      dispatch({
+        type: "ADD_TRANSACTIONS",
+        payload: res.data.data,
+      });
+    } catch (err) {
+      dispatch({
+        type: "TRANSACTION_ERROR",
+        payload: err.response.data.error,
+      });
+    }
+  };
