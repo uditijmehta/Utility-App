@@ -18,6 +18,14 @@ const initState = {
               ...state,
               transactions: [...state.transactions, action.payload],
             };
+
+        case "UPDATE_TRANSACTIONS":
+                return {
+                  ...state,
+                  transactions: state.transactions.map((t) =>
+                    t._id === action.payload.id ? action.payload : t
+                  ),
+                };
    
       case "TRANSACTION_ERROR":
         return {
