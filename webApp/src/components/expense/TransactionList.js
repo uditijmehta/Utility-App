@@ -1,0 +1,41 @@
+import React, { useEffect, useState } from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+// Actions
+import { getTransactions } from "../../actions/expenseAction";
+
+// Components
+import { Transaction } from "./Transaction";
+import Spinner from "../layout/Spinner";
+
+// Style
+import styled from "styled-components";
+
+//  icons
+  
+ 
+const TransactionListStyle = styled.div`
+  h3 {
+    color: #fff;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .btn-2 {
+    margin: 15px;
+    padding: 0.6rem 1.8rem;
+
+    background: linear-gradient(90deg, #88108a, #6711e7);
+
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: space-between;
+  }
+`;
