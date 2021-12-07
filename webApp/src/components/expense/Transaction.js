@@ -32,3 +32,19 @@ const TransactionStyle = styled.div`
     }
   }
 `;
+
+const ListStyle = styled.li`
+background-color: #fff;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+color: 333;
+padding: 15px;
+display: flex;
+justify-content: space-between;
+font-size: 1.3rem;
+width: 100%;
+margin-right: 1rem;
+margin-top: 1rem;
+@media (max-width: 48rem) {
+  width: 250px;
+}
+`;
