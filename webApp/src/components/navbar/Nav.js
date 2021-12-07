@@ -1,8 +1,20 @@
 import React, { useState } from "react";
 // Router
 
+import { Link } from "react-router-dom";
+// React icons
+import { IconContext } from "react-icons";
+import * as BiIcons from "react-icons/bi";
+import * as AiIcons from "react-icons/ai";
+import * as RiIcons from "react-icons/ri";
+import * as IoIcons from "react-icons/io5";
+import * as FaIcons from "react-icons/fa";
+// Actions
+import { logout } from "../../actions/authActions";
 import { useDispatch, useSelector } from "react-redux";
 // Styles and Animations
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const { isAuthenticated, loading } = useSelector((state) => state.auth);
@@ -66,7 +78,7 @@ const Nav = () => {
   );
   const [sidebar, setSidebar] = useState(false);
 
-  // Functions
+  // functions
   const showSidebar = () => {
     setSidebar(!sidebar);
   };
@@ -78,6 +90,7 @@ const Nav = () => {
             <BiIcons.BiMenuAltLeft onClick={showSidebar} />
           </Link>
         </Navbar>
+        
         <NavMenu className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul onClick={showSidebar} className="nav-menu-items">
             <li className="navbar-toggle">
@@ -92,5 +105,35 @@ const Nav = () => {
     </>
   );
 };
+
+const Navbar = styled(motion.div)`
+  background-color: #121212;
+  color: #fff;
+  max-height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .menu-bars.main {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+  }
+  .logo {
+    margin-right: 45%;
+    height: 7rem;
+
+    .st0 {
+      fill: #ffff;
+    }
+  }
+`;
+
+const NavMenu = styled(motion.nav)`
+  .menu-bars {
+    margin-left: 20px;
+  }
+  z-index: 100;
+`;
 
 export default Nav;

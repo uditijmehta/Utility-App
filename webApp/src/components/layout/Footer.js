@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <MainFooter>
       <p>
-        Copyright &copy;2021 Cubicle. Designed by <span>Team 8</span>
+        Copyright &copy;2021 Helper. Designed by <span>Team 8</span>
       </p>
 
       <Icons>
@@ -26,5 +26,40 @@ export const Footer = () => {
     </MainFooter>
   );
 };
+const MainFooter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: black;
+  min-height: 10vh;
+  padding-top: 1.5rem;
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  flex-wrap: wrap;
+  flex-direction: column;
+  span {
+    font-family: "Open Sans", sans-serif;
+    opacity: 0.5;
+    font-weight: 300;
+  }
+  @media (max-width: 48rem) {
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+`;
+
+const Icons = styled.div`
+  padding-bottom: 0.5rem;
+  display: flex;
+  a {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+`;
 
 export default Footer;
