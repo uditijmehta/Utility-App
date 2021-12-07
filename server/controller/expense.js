@@ -36,3 +36,34 @@ exports.createExpense = asyncHandler(async (req, res, next) => {
     res.status(201).json({ success: true, data: expense });
   });
   
+  // @desc    Update expense
+// @route   PUT /api/v1/expenses/:id
+// @access  Private
+
+exports.updateExpense = asyncHandler(async (req, res, next) => {
+    let expense = await Expenses.findById(req.params.id);
+    if (!expense) {
+      return next(
+        new ErrorResponse(
+          `Expense not found with the id of ${req.params.id}`,
+          404
+        )
+      );
+    }
+   // Make sure user is expense owner
+   if (expense.user.toString() !== req.user.id) {
+    return next(
+      new ErrorResponse(
+        `User ${req.user.id} is not authorized to update this expense`,
+        404
+      )
+    );
+  }
+
+  expense = await Expenses.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
+
+  res.status(202).json({ success: true, data: expense });
+});
