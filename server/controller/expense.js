@@ -67,3 +67,33 @@ exports.updateExpense = asyncHandler(async (req, res, next) => {
 
   res.status(202).json({ success: true, data: expense });
 });
+
+// @desc    Delete expense
+// @route   DELETE /api/v1/expense/:id
+// @access  Private
+
+exports.deleteExpense = asyncHandler(async (req, res, next) => {
+    const expense = await Expenses.findById(req.params.id);
+    if (!expense) {
+      return next(
+        new ErrorResponse(
+          `Expense not found with the id of ${req.params.id}`,
+          404
+        )
+      );
+    }
+  
+    // Make sure user is expense owner
+    if (expense.user.toString() !== req.user.id) {
+      return next(
+        new ErrorResponse(
+          `User ${req.user.id} is not authorized to delete this expense`,
+          404
+        )
+      );
+    }
+  
+    expense.remove();
+    res.status(200).json({ success: true, data: {} });
+  });
+  
