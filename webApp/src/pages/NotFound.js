@@ -88,12 +88,7 @@ const WrapperStyle = styled.section`
     animation: red 3s linear infinite, opacityRed 5s linear alternate infinite;
   }
 
-  .blue {
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png)
-      no-repeat center center;
-    opacity: 0;
-    animation: blue 3s linear infinite, opacityBlue 5s linear alternate infinite;
-  }
+  
 
   @media only screen and (min-width: 780px) {
     .site {
@@ -113,38 +108,6 @@ const WrapperStyle = styled.section`
     }
   }
 
-  @keyframes blue {
-    0% {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png);
-    }
-    9.09% {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-2.png);
-    }
-    27.27% {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-3.png);
-    }
-    36.36% {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-4.png);
-    }
-    45.45% {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-5.png);
-    }
-    54.54% {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-6.png);
-    }
-    63.63% {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-7.png);
-    }
-    72.72% {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-8.png);
-    }
-    81.81% {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-9.png);
-    }
-    100% {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png);
-    }
-  }
 
   @keyframes red {
     0% {
