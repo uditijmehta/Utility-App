@@ -12,6 +12,12 @@ const initState = {
           transactions: action.payload,
           loading: false,
         };
+
+        case "ADD_TRANSACTIONS":
+            return {
+              ...state,
+              transactions: [...state.transactions, action.payload],
+            };
    
       case "TRANSACTION_ERROR":
         return {
