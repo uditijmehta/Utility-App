@@ -9,6 +9,9 @@ import Footer from "./components/layout/Footer";
 // Alert
 import Alert from "./components/layout/Alert";
 
+// Pages
+import Todo from "./pages/Todo";
+
 // Actions
 import setAuthToken from "./utils/setAuthToken";
 import { loadUser } from "./actions/authActions";
