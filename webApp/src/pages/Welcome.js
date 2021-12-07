@@ -9,7 +9,7 @@ const Welcome = () => {
         <div className="header">
           <div className="content">
             <h1>
-              Welcome to Helper <br />
+              Welcome to MySpace <br />
               <span className="heading-secondary">Your daily personal assistant</span>
             </h1>
             <div className="buttons">
