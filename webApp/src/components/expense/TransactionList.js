@@ -27,6 +27,14 @@ export const TransactionList = ({
     useEffect(() => {
       dispatch(getTransactions());
     }, [dispatch, updateExpenseHandler]);
+  
+    // Get current expenses
+    const indexOfLastExpense = currentPage * expensePerPage;
+    const indexOfFirstExpense = indexOfLastExpense - expensePerPage;
+    const currentExpense = transactions.slice(
+      indexOfFirstExpense,
+      indexOfLastExpense
+    );
   };
   
  
