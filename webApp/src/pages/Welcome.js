@@ -146,7 +146,7 @@ const WelcomeStyle = styled.div`
     width: 150px;
     height: 50px;
     padding-left: 20px;
-    background: #000;
+    background: #2243a3;
     color: #fff;
     font-size: 1.3em;
     text-decoration: none;
