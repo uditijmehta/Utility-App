@@ -89,6 +89,78 @@ const Nav = () => {
           <Link to="#" className="menu-bars main">
             <BiIcons.BiMenuAltLeft onClick={showSidebar} />
           </Link>
+          <h2> MySpace</h2>
+            <svg className='nav-logo'
+                version="1.1"
+                xmlns="http://www.w3.org/1999/xlink"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="653 295 292 336">
+                <g
+                    data-item-type="text"
+                    data-item="Business"
+                    id="logo__item--business"
+                    class="logo__item">
+                    <g
+                        class="logo__item__inner"
+                        transform="translate(685 407.57038158720496) scale(1 1) rotate(0 0 0)">
+                        <text
+                            data-part-id="logo__item--business"
+                            dy="0"
+                            dominant-baseline="auto"
+                            alignment-baseline="auto"
+                            font-family="Montserrat"
+                            font-size="32px"
+                            fill="#E5E5E5"
+                            letter-spacing="0"
+                            font-weight="bold"
+                            font-style="normal"
+                            data-font-family="Montserrat"
+                            data-font-weight="bold"
+                            data-font-style="normal"
+                            data-ttf-url="/builder_assets/fontsttf/font-montserrat-bold-normal.ttf"></text>
+                    </g>
+                </g>
+                <g
+                    data-item-type="image"
+                    data-item="Image"
+                    data-logo-item=""
+                    id="logo__item--logo_0"
+                    class="logo__item">
+                    <g
+                        class="logo__item__inner"
+                        transform="translate(619.8973577906524 281.5) scale(2.422138382974935 2.422138382974935) rotate(0 0 0)">
+
+                        <g>
+                            
+                            <polygon
+                                fill="#808184"
+                                points="74,64.6 112,37.8 105.9,34.3 74,56.7"
+                                data-part-id="logo__item--logo_0__1"></polygon>
+                            <polygon
+                                fill="#808184"
+                                points="71,86.3 71.3,86.4 71.4,86.3 125,47.6 125,45.5 120.3,42.9 71,76.2"
+                                data-part-id="logo__item--logo_0__2"></polygon>
+                            <path
+                                fill="#808184"
+                                d="M71.8,108.4L71.8,108.4c1.9-1.2,45.2-27.5,53.2-32.7v-8L71.7,98.2L71.8,108.4z"
+                                data-part-id="logo__item--logo_0__3"></path>
+                            <path
+                                fill="#808184"
+                                d="M80,129.5c2-1.3,38-23.1,45-27.8v-8.2l-45,26.2V129.5z"
+                                data-part-id="logo__item--logo_0__4"></path>
+                            <polygon
+                                fill="#808184"
+                                points="65,37.2 65,37.2 65,44.6 94,27.5 87.4,23.8 65,37.2"
+                                data-part-id="logo__item--logo_0__5"></polygon>
+                            <path
+                                fill="#29A9E1"
+                                d="M74,6.9L15,41v68.2l59,34.1l59-34.1V41L74,6.9z M23,97.7l56.7,31.9l0-9.8L23,89.4v-8.7l49,27.6V98.1   L23,72.1V58.8l42.2,23.9l5.8,3.5v-9.9L23,50.4v-4.8l6.9-4.2L73,65v-8.2L36.9,37.2l7-3.9L65,44.9V37l-14-7.7l23-13.3l13.6,7.9   l6.5,3.7l11.7,6.7l6.2,3.6l8.7,5.1l4.5,2.6v2v20.1v8v17.8v8.2v3l-51,29.6l-51-29.6V97.7z"
+                                data-part-id="logo__item--logo_0__6"></path>
+                        </g>
+
+                    </g>
+                </g>
+            </svg>
         </Navbar>
         
         <NavMenu className={sidebar ? "nav-menu active" : "nav-menu"}>
