@@ -88,7 +88,8 @@ min-height: 100vh;
     -webkit-transition: -webkit-transform 300ms, box-shadow 300ms;
     -moz-transition: -moz-transform 300ms, box-shadow 300ms;
     transition: transform 300ms, box-shadow 300ms;
-    box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+    // box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+    box-shadow: rgb(2 128 144 / 24%) 0 2px 24px;
 }
 .login::before,
 .login::after {
