@@ -67,6 +67,15 @@ const Expense = () => {
                 updateExpenseHandler={updateExpenseHandler}
               />
             </div>
+
+            <div className="content">
+          <TransactionList
+            updateHandler={updateHandler}
+            toggleSubmit={toggleSubmit}
+            setToggleSubmit={setToggleSubmit}
+            updateExpenseHandler={updateExpenseHandler}
+          />
+        </div>
           </div>
         </ExpenseStyle>
       );
