@@ -37,6 +37,19 @@ export const TransactionList = ({
     );
   };
   
+  // Next Expense
+  const nextExpenseHandler = () => {
+    if (transactions.length > 0) {
+      let totalExpenses = transactions.length;
+      let totalPages = Math.ceil(totalExpenses / expensePerPage);
+
+      if (currentPage < totalPages) {
+        setCurrentPage(currentPage + 1);
+      } else {
+        setCurrentPage(totalPages);
+      }
+    }
+  };
  
 const TransactionListStyle = styled.div`
   h3 {
