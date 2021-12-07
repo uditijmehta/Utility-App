@@ -80,5 +80,48 @@ const Expense = () => {
         </ExpenseStyle>
       );
     };
+
+    const ExpenseStyle = styled.div`
+  background: rgb(59, 62, 227);
+  background: linear-gradient(
+    21deg,
+    rgba(59, 62, 227, 1) 2%,
+    rgba(76, 158, 255, 1) 89%
+  );
+  padding-bottom: 10rem;
+
+  .container {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    flex: 1;
+    width: 80%;
+    max-width: 1140px;
+    margin: 0 auto;
+
+    .content {
+      padding-left: 2em;
+    }
+    @media (max-width: 48rem) {
+      width: 100%;
+    }
+  }
+  @media (max-width: 48rem) {
+    .container {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+
+      flex-direction: column;
+    }
+  }
+`;
     
 export default Expense;
