@@ -31,6 +31,40 @@ export const AddTransaction = ({
       setText("");
       setAmount(0);
     };
+
+    return (
+        <AddTransactionStyle>
+          <h3>Add new transaction</h3>
+          <form
+            onSubmit={toggleSubmit === true ? updateExpenseHandler : submitHandler}
+          >
+            <div className="form-control">
+              <label htmlFor="text">Text</label>
+              <input
+                type="text"
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                placeholder="Enter text..."
+              />
+            </div>
+            <div className="form-control">
+              <label htmlFor="amount">
+                Amount <br />
+                (negative - expense, positive - income)
+              </label>
+              <input
+                type="number"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+                placeholder="Enter amount..."
+              />
+            </div>
+            <button className="btn">
+              {toggleSubmit === true ? "Update Transaction" : "Add Transaction"}
+            </button>
+          </form>
+        </AddTransactionStyle>
+      );
 };
 
 const AddTransactionStyle = styled.div`
