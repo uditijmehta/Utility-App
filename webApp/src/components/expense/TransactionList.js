@@ -50,6 +50,13 @@ export const TransactionList = ({
       }
     }
   };
+
+  // Prev expenses
+  const prevExpenseHandler = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
  
 const TransactionListStyle = styled.div`
   h3 {
