@@ -23,3 +23,16 @@ exports.getAllExpenses = asyncHandler(async (req, res, next) => {
     data: expenses,
   });
 });
+
+// @desc    Create expense
+// @route   POST /api/v1/expenses
+// @access  Private
+
+exports.createExpense = asyncHandler(async (req, res, next) => {
+    // Add user to req.body
+    req.body.user = req.user.id;
+  
+    const expense = await Expenses.create(req.body);
+    res.status(201).json({ success: true, data: expense });
+  });
+  
