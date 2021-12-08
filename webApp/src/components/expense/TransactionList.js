@@ -14,29 +14,28 @@ import styled from "styled-components";
 //  icons
 
 export const TransactionList = ({
-    updateHandler,
-    toggleSubmit,
-    setToggleSubmit,
-    updateExpenseHandler,
-  }) => {
-    const [currentPage, setCurrentPage] = useState(1);
-    const [expensePerPage, setExpensePerPage] = useState(5);
-  
-    const { transactions, loading } = useSelector((state) => state.expenses);
-    const dispatch = useDispatch();
-    useEffect(() => {
-      dispatch(getTransactions());
-    }, [dispatch, updateExpenseHandler]);
-  
-    // Get current expenses
-    const indexOfLastExpense = currentPage * expensePerPage;
-    const indexOfFirstExpense = indexOfLastExpense - expensePerPage;
-    const currentExpense = transactions.slice(
-      indexOfFirstExpense,
-      indexOfLastExpense
-    );
-  
-    
+  updateHandler,
+  toggleSubmit,
+  setToggleSubmit,
+  updateExpenseHandler,
+}) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [expensePerPage, setExpensePerPage] = useState(5);
+
+  const { transactions, loading } = useSelector((state) => state.expenses);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getTransactions());
+  }, [dispatch, updateExpenseHandler]);
+
+  // Get current expenses
+  const indexOfLastExpense = currentPage * expensePerPage;
+  const indexOfFirstExpense = indexOfLastExpense - expensePerPage;
+  const currentExpense = transactions.slice(
+    indexOfFirstExpense,
+    indexOfLastExpense
+  );
+
   // Next Expense
   const nextExpenseHandler = () => {
     if (transactions.length > 0) {
@@ -90,7 +89,6 @@ export const TransactionList = ({
   );
 };
 
- 
 const TransactionListStyle = styled.div`
   h3 {
     color: #fff;

@@ -13,7 +13,7 @@ export const Balance = () => {
   
     return (
       <BalanceStyle>
-        <h4>Your Balance</h4>
+        <h4>Your Balance:</h4>
         <h1>₹{numberWithCommas(total)}</h1>
       </BalanceStyle>
     );
@@ -22,6 +22,7 @@ export const Balance = () => {
 const BalanceStyle = styled.div`
   color: #fff;
   h4 {
+    margin: 30px 0 10px 0;
     font-size: 1.4rem;
   }
 `;

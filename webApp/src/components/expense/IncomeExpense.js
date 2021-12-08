@@ -20,6 +20,7 @@ export const IncomeExpense = () => {
     -1
   ).toFixed(2);
   return (
+    <IncomeExpenseTag>
     <div className='inc-exp-container'>
       <div>
         <h4>Income</h4>
@@ -30,5 +31,12 @@ export const IncomeExpense = () => {
         <p className='money minus'>{numberWithCommas(expense)}</p>
       </div>
     </div>
+    </IncomeExpenseTag>
   );
 };
+
+const IncomeExpenseTag = styled.div`
+  h4 {
+    color: black;
+  }
+`;

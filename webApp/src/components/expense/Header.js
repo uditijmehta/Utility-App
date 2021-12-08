@@ -14,7 +14,7 @@ export const Header = () => {
           <>
             <h3>Hello {Capitalize(user.data.name)},</h3>
             <h3>
-              Here's your spending <span>wallet!!</span>
+              Here's your spending <span>wallet!</span>
             </h3>
           </>
         )}
