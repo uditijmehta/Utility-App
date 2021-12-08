@@ -292,3 +292,57 @@ export const GymWorkout = () => {
     </Main>
   );
 };
+
+const Main = styled.div`
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+  padding: 10px; ;
+`;
+const Head = styled.h1`
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 10px;
+  font-size: 55px;
+  text-align: center;
+  color: #ffffff;
+  span {
+    color: #ff3d3d;
+  }
+  @media (max-width: 48rem) {
+    font-size: 10vw;
+  }
+`;
+ty
+const Div1 = styled.div`
+  font-size: 18px;
+
+  margin: auto;
+
+  width: 70%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 25px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin-bottom: 6rem;
+  p {
+    text-align: center;
+  }
+  h3 {
+    font-size: 32px;
+    text-align: center;
+    color: #ff3d3d;
+  }
+  h5 {
+    font-size: 27px;
+    text-align: center;
+    color: #ff3d3d;
+  }
+  transition: all 0.75s ease-in-out;
+  &:hover {
+  }
+  @media (max-width: 48rem) {
+    width: 90%;
+  }
+`;
+
