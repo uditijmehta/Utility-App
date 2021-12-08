@@ -38,16 +38,16 @@ export const AddTransaction = ({
           <form
             onSubmit={toggleSubmit === true ? updateExpenseHandler : submitHandler}
           >
-            <div className="form-control">
-              <label htmlFor="text">Text</label>
+            <div className="formcontrol">
+              <label htmlFor="text">Title:</label>
               <input
                 type="text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                placeholder="Enter text..."
+                placeholder="Enter text"
               />
             </div>
-            <div className="form-control">
+            <div className="formcontrol">
               <label htmlFor="amount">
                 Amount <br />
                 (negative - expense, positive - income)
@@ -56,10 +56,10 @@ export const AddTransaction = ({
                 type="number"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                placeholder="Enter amount..."
+                placeholder="Enter amount"
               />
             </div>
-            <button className="btn">
+            <button className="addBtn">
               {toggleSubmit === true ? "Update Transaction" : "Add Transaction"}
             </button>
           </form>
@@ -75,7 +75,7 @@ const AddTransactionStyle = styled.div`
     margin: 10px 0;
   }
 
-  .btn {
+  .addBtn {
     cursor: pointer;
     background: rgb(144, 227, 59);
     background: linear-gradient(
@@ -93,7 +93,7 @@ const AddTransactionStyle = styled.div`
     width: 100%;
   }
 
-  .btn:focus,
+  .addBtn:focus,
   .delete-btn:focus,
   .update-btn:focus {
     outline: 0;
@@ -104,12 +104,15 @@ const AddTransactionStyle = styled.div`
     margin: 40px 0 10px;
   }
   label {
+    font-weight: 700;
     display: inline-block;
     margin: 10px 0;
   }
 
   input[type="text"],
   input[type="number"] {
+    background: white;
+    color: black;
     border: 1px solid #dedede;
     border-radius: 2px;
     display: block;
