@@ -13,6 +13,13 @@ const RegisterPage = () => {
   );
 };
 
-const RegisterStyle = styled.div``;
+const RegisterStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; 
+  background-color: rgba(179,218,214,50%);
+`;
+
 
 export default RegisterPage;

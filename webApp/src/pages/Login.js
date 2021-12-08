@@ -14,10 +14,11 @@ const LoginPage = () => {
 };
 
 const LoginStyle = styled.div`
-  /* display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; */
+  height: 90vh; 
+  background-color: rgba(179,218,214,50%);
 `;
 
 export default LoginPage;

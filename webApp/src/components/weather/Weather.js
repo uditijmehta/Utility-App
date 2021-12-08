@@ -17,7 +17,7 @@ const Weather = () => {
 
 const StyledWeather = styled(motion.div)`
   background: url(${weatherBg}) center center/cover;
-  height: 92vh;
+  height: 80vh;
   display: flex;
   justify-content: space-between;
 
