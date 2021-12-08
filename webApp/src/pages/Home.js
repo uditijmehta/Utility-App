@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 // Import components
 import Weather from "../components/weather/Weather";
-import News from "../components/news/News";
+import News from "../components/NewsApp";
 
 const Home = () => {
   return (
