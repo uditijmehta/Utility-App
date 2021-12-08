@@ -86,10 +86,11 @@ const AddTransactionStyle = styled.div`
     box-shadow: var(--box-shadow);
     color: #fff;
     border: 0;
+    border-radius: 10px;
     display: inline-block;
     font-size: 1.3rem;
-    margin: 10px 0 30px;
-    padding: 20px;
+    margin: 30px 0 30px;
+    padding: 10px;
     width: 100%;
   }
 
