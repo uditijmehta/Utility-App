@@ -134,7 +134,7 @@ min-height: 100vh;
     background: white;
     width: 100%;
     border: none;
-
+    color: teal;
     padding: 10px 10px;
     margin: 15px -10px;
     outline: none;
