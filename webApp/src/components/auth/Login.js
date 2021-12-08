@@ -144,26 +144,31 @@ min-height: 100vh;
     }
 }
 button {
-    font-family: "Asap", sans-serif;
-    cursor: pointer;
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    width: 80px;
-    border: 0;
-    padding: 10px 0;
-    margin-top: 10px;
-    margin-left: -5px;
-    border-radius: 5px;
-    background-color: #f45b69;
-    -webkit-transition: background-color 300ms;
-    -moz-transition: background-color 300ms;
-    transition: background-color 300ms;
-
-    cursor: pointer;
+  font-family: "Asap", sans-serif;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 80px;
+  border: 0;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin-left: -5px;
+  border-radius: 5px;
+  background-color: rgb(2 128 144 / 100%);
+  -webkit-transition: background-color 300ms;
+  -moz-transition: background-color 300ms;
+  transition: background-color 300ms;
+  transition: color 300ms;
+  box-shadow: rgb(2 128 144 / 24%) 0 2px 24px;
+  cursor: pointer;
 }
 button:hover {
-    background-color: #f24353;
+  background-color: white;
+    color: rgb(2 128 144 / 100%);
+    outline: rgb(2 128 144 / 100%) solid 3px;
+    box-sizing: border-box;
+    transition: color 500ms;
 }
 
 @-webkit-keyframes wawes {
