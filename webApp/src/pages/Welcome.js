@@ -56,8 +56,8 @@ const WelcomeStyle = styled.div`
     // background: -moz-linear-gradient(top, #a741ff 0%, #5480fd 100%);
     // background: -webkit-linear-gradient(top, #a741ff 0%, #5480fd 100%);
     // background: linear-gradient(to bottom, #a741ff 0%, #5480fd 100%);
-    // background-image: linear-gradient( 135deg, #97ABFF 10%, #123597 100%);
-    background-color: rgba(179,218,214,50%);
+    background-image: linear-gradient( 135deg, #97ABFF 10%, #123597 100%);
+    //background-color: rgba(179,218,214,50%);
   }
   .wrapper {
     width: 80%;

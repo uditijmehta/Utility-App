@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Newsitem from './Newsitem'
 import Spinner from './Spinner';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import styled from "styled-components";
 
 const News = (props)=>{
 
@@ -39,7 +40,8 @@ const News = (props)=>{
     }
     
     return (
-        <>
+        <NewsBlock>
+            
             <h1 style={{textAlign: "center", margin: "90px 0px 40px 0px"}}>News{props.heading}</h1>
             {loading && <Spinner />}
             <InfiniteScroll
@@ -58,9 +60,16 @@ const News = (props)=>{
                     </div>
                 </div>
             </InfiniteScroll>
-        </>
+        </NewsBlock>
     )
 
 }
+
+const NewsBlock = styled.div`
+    h1 {
+        color:red;
+    }
+`;
+
 
 export default News
