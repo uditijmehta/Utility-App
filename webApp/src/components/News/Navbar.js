@@ -49,8 +49,10 @@ const Navbarnews = styled.div`
         text-align: center;
         // background-image: linear-gradient(to right, blue, back);
         background: rgb(117,200,235);
-background: linear-gradient(180deg, rgba(117,200,235,1) 0%, rgba(10,124,198,1) 100%);
+        background: linear-gradient(180deg, rgba(117,200,235,1) 0%, rgba(10,124,198,1) 100%);
     }
+
+    
     .hed{
         background-color: white;
         color: black;
@@ -65,10 +67,12 @@ background: linear-gradient(180deg, rgba(117,200,235,1) 0%, rgba(10,124,198,1) 1
         // background-color: white;
         margin: 10px;
         border-radius: 10px;
+        color: white;
     }
 
     .blinking {
-            background-color: white;
+        background: #59c7f2;
+        // background: linear-gradient(180deg, rgba(162,223,250,1) 0%, rgba(117,196,230,1) 100%);
             color: black;
             padding: 10px;
             font-weight:bold;
@@ -80,21 +84,21 @@ background: linear-gradient(180deg, rgba(117,200,235,1) 0%, rgba(10,124,198,1) 1
            
            @keyframes pulsecolor {
              0% {
-               color: rgba(245, 0, 0, 1);
+               color: back;
              }
              
                25% {
-               color: tomato;
+               color: gray;
              }
              50% {
-               color: rgba(245, 0, 0, 1);
+               color: black;
              }
                75% {
-               color: tomato;
+               color: gray;
              }
              
                100% {
-               color: red;
+               color: black;
              }
            }
            
