@@ -312,7 +312,7 @@ const Head = styled.h1`
     font-size: 10vw;
   }
 `;
-ty
+
 const Div1 = styled.div`
   font-size: 18px;
 
