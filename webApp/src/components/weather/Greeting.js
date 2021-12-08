@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import {WeatherData} from "./weatherData";
+import {WeatherData} from "./WeatherData";
 import { CurrentWeather } from "./currentWeather";
 
 import moment from "moment";
