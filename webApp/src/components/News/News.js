@@ -39,7 +39,26 @@ const News = (props)=>{
     }
     
     return (
-     
+        <>
+            <h1 style={{textAlign: "center", margin: "90px 0px 40px 0px"}}>News{props.heading}</h1>
+            {loading && <Spinner />}
+            <InfiniteScroll
+                dataLength={article.length}
+                next={fetchMoreData}
+                hasMore={article.length !== totalResults}
+                loader={<Spinner />}
+                >
+                <div className="container">
+                    <div className="row my-4">
+                    {article.map((element)=>{
+                        return <div className="col-md-4" key={element.url}>
+                                    <Newsitem title={element.title} description={element.description} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
+                                </div>
+                    })}
+                    </div>
+                </div>
+            </InfiniteScroll>
+        </>
     )
 
 }
