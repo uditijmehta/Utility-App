@@ -4,7 +4,7 @@ import './weather.css'
 const weather = (props) => {
   return (
     <div>
-      <div className='current-container'>
+      <div className='current'>
         <div className='cards'>
           <h1>{props.city}</h1>
           <i className={`wi ${props.favicon} display-1`}></i>

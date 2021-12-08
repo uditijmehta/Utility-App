@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Weather from './weather-component';
+import Weather from './weather-component-current';
 import Current from "./weatherAppCurrent";
 
 const API_KEY = "0c0b4df092dbae4f8a5b91894c65ca1d";
