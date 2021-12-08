@@ -1,6 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
+export const Tips = () => {
+    return (
+      <Main>
+        <Content>
+        </Content>
+      </Main>
+    );
+  };
+
 const Main = styled.div`
   padding: 1rem;
   background-size: cover;
