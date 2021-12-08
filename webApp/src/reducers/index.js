@@ -1,4 +1,4 @@
-import weatherReducer from './weatherReducer';
+// import weatherReducer from './weatherReducer';
 import newsReducer from './newsReducer';
 import todoReducer from './todoReducer';
 import expenseReducer from './expenseReducer';
@@ -7,7 +7,7 @@ import authReducer from './authReducer';
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-    weather: weatherReducer,
+    // weather: weatherReducer,
     news: newsReducer,
     todoList: todoReducer,
     expenses: expenseReducer,

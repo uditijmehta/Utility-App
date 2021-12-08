@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
+// Actions
+import { login } from "../../actions/authActions";
+// import "Login.scss"
+
+// Style
+import styled from "styled-components";
+
 const Login = () => {
     const { isAuthenticated } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
