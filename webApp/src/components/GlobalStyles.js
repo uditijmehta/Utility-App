@@ -30,7 +30,7 @@ body{
 h1{
    font-family: 'Montserrat', sans-serif;
    font-weight: 400; 
-   color: black;
+  //  color: black;
 }
 
 ul{
