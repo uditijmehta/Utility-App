@@ -6,7 +6,7 @@ const Current = (props) => {
     <div className='current'>
       <div>{props.error ? error() : null}</div>
       <form onSubmit={props.loadweatherdetails}>
-        <button className='btn btn-primary currentBtn'>Get Current Location Weather</button>
+        <button className='currentBtn'>Get Current Location Weather</button>
       </form>
     </div>
   )
@@ -14,8 +14,8 @@ const Current = (props) => {
 
 function error() {
   return (
-    <div className='alert alert-danger mx-5' role='alert'>
-      Enter Valid City Name
+    <div className='alert' role='alert'>
+      Enter Valid City Name!
     </div>
   )
 }

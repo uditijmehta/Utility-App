@@ -1,4 +1,4 @@
-.container {
+.container-data {
   margin-top: 3rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: large;
@@ -8,10 +8,15 @@
 
 }
 
-.current-container {
+.current-container, .alert {
   position: absolute;
-  right: 270px;
+  right: 180px;
   top: 330px;
+}
+
+.alert {
+  background: red;
+  width: fit-content;
 }
 
 .current {
@@ -19,7 +24,7 @@
   font-size: large;
 }
 
-.row {
+.data {
   margin-top: 20px;
 }
 
@@ -38,7 +43,7 @@ form input:focus {
   box-shadow: none !important;
 }
 
-.btn {
+.currentBtn {
   background: white;
   border-radius: 10px;
   margin: 20px 0;
