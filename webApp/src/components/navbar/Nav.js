@@ -89,7 +89,8 @@ const Nav = () => {
           <Link to="#" className="menu-bars main">
             <BiIcons.BiMenuAltLeft onClick={showSidebar} />
           </Link>
-          <h2> MySpace</h2>
+          <div className='logo-header'>
+            <h2 > MySpace</h2>
             <svg className='nav-logo'
                 version="1.1"
                 xmlns="http://www.w3.org/1999/xlink"
@@ -161,6 +162,7 @@ const Nav = () => {
                     </g>
                 </g>
             </svg>
+          </div>
         </Navbar>
         
         <NavMenu className={sidebar ? "nav-menu active" : "nav-menu"}>
@@ -183,7 +185,7 @@ const Navbar = styled(motion.div)`
   color: #fff;
   max-height: 8vh;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   font-family: 'Montserrat',sans-serif;
 
@@ -198,6 +200,19 @@ const Navbar = styled(motion.div)`
 
     .st0 {
       fill: #ffff;
+    }
+  }
+  
+  .logo-header{
+    display: flex;
+    margin-left: 40%;
+
+    h2{
+      padding: 5px;
+    }
+
+    svg{
+      width: 28px;
     }
   }
 `;
