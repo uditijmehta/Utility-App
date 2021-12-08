@@ -3,22 +3,22 @@ import './weather.css'
 
 const Form = (props) => {
   return (
-    <div className='container'>
+    <div className='container-data'>
       <div>{props.error ? error() : null}</div>
       <form onSubmit={props.loadweatherdetails}>
       <h1>Search another city</h1>
-        <div className='row'>
-          <div className='col-md-3'>
+        <div className='data'>
+          <div className=''>
             <input
               type='text'
-              className='form-control'
+              className=''
               name='city'
               autoComplete='off'
               placeholder='Enter City'
             ></input>
           </div>
-          <div className='col-md-3 mt-md-0 text-md-left'></div>
-          <button className='btn btn-primary'>Get Weather!</button>
+          <div className=''></div>
+          <button className='currentBtn'>Get Weather!</button>
         </div>
       </form>
     </div>
@@ -26,8 +26,8 @@ const Form = (props) => {
 }
 function error() {
   return (
-    <div className='alert alert-danger mx-5' role='alert'>
-      Enter Valid City Name
+    <div className='alert' role='alert'>
+      Enter Valid City Name!
     </div>
   )
 }
