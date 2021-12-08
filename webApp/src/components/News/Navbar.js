@@ -43,11 +43,11 @@ const Navbar = ()=>{
 
 const Navbarnews = styled.div`
     .navbar {
-        // background-color: tomato;
-        color:white;
+        background-color: white;
+        color: white;
         font-weight:bold;
         text-align: center;
-        // background-image: linear-gradient(to right, blue, back);
+        ${'' /* background-image: linear-gradient(to right, blue, back); */}
         background: rgb(117,200,235);
         background: linear-gradient(180deg, rgba(117,200,235,1) 0%, rgba(10,124,198,1) 100%);
     }
@@ -64,7 +64,7 @@ const Navbarnews = styled.div`
     }
 
     .nav-item{
-        // background-color: white;
+        background-color: white;
         margin: 10px;
         border-radius: 10px;
         color: white;

@@ -67,6 +67,7 @@ const News = (props)=>{
 
 const NewsBlock = styled.div`
     h1 {
+        background: white;
         color:red;
     }
 `;
