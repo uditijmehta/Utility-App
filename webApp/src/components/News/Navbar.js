@@ -43,11 +43,16 @@ const Navbar = ()=>{
 
 const Navbarnews = styled.div`
     .navbar {
-        background-color: tomato;
+        // background-color: tomato;
         color:white;
+        font-weight:bold;
+        text-align: center;
+        // background-image: linear-gradient(to right, blue, back);
+        background: rgb(117,200,235);
+background: linear-gradient(180deg, rgba(117,200,235,1) 0%, rgba(10,124,198,1) 100%);
     }
     .hed{
-        background-color: orange;
+        background-color: white;
         color: black;
         padding: 10px;
         font-weight:bold;
@@ -56,14 +61,21 @@ const Navbarnews = styled.div`
         
     }
 
+    .nav-item{
+        // background-color: white;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
     .blinking {
-            background-color: orange;
+            background-color: white;
             color: black;
             padding: 10px;
             font-weight:bold;
             font-family: "Asap", sans-serif;
              animation: pulsecolor 4s infinite;
              text-align: center;
+             font-size: 30px;
            }
            
            @keyframes pulsecolor {
