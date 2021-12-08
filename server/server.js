@@ -24,7 +24,7 @@ app.use(express.json());
 // Cookie Parser
 app.use(cookieParser());
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 1234;
 
 // Dev logging middleware
 if (process.env.NODE_ENV === "development") {
