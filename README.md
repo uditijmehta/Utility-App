@@ -22,7 +22,6 @@ Rakesh Ramesh Baddi
 
 1. Fitness Zone.
 
-1. Live Chat.
 
 ---
 
