@@ -259,3 +259,39 @@ const Main = styled.div`
   padding: 10px;
 `;
 
+const Head = styled.h1`
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 10px;
+  font-size: 55px;
+  text-align: center;
+  color: #ffffff;
+  span {
+    color: #ff3d3d;
+  }
+  @media (max-width: 48rem) {
+    font-size: 3rem;
+  }
+`;
+
+const Div1 = styled.div`
+  font-size: 18px;
+  margin: auto;
+  width: 70%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin-bottom: 6rem;
+  h3 {
+    font-size: 32px;
+    text-align: center;
+    color: #ff3d3d;
+  }
+  transition: all 0.75s ease-in-out;
+
+  @media (max-width: 48rem) {
+    width: 90%;
+  }
+`;
