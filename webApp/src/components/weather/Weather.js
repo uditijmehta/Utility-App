@@ -1,7 +1,6 @@
 import React from "react";
 // Components
 import Greeting from "./Greeting";
-import weatherBg from "../../img/weatherBg.jpg";
 
 // Styles
 import styled from "styled-components";

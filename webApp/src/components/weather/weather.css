@@ -10,8 +10,8 @@
 
 .current-container, .alert {
   position: absolute;
-  right: 180px;
-  top: 330px;
+  right: 260px;
+  top: 350px;
 }
 
 .alert {
