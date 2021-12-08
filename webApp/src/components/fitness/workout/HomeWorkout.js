@@ -252,3 +252,10 @@ export const HomeWorkout = () => {
   );
 };
 
+const Main = styled.div`
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+
+  padding: 10px;
+`;
+
